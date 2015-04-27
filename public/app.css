@@ -1,0 +1,30 @@
+/*your stylesheet here*/
+
+body { 
+  background: #ccc;
+  padding-top: 50px;
+  padding-bottom: 38px;
+}
+
+.oge-wrapper {
+  height: 100%;
+}
+
+.navbar-fixed-top {
+  background: orange;
+  color: #eee;
+  text-align: center;
+  height: 50px;
+}
+
+.navbar-fixed-bottom {
+  text-align: center;
+  height: 38px;
+  background: #444;
+  color: #eee;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}

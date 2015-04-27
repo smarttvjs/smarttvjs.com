@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="lib/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="lib/smarttv.css" />
+  <link rel="stylesheet" type="text/css" href="app.css" />
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <div id="header_view" class="navbar-brand"></div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid container-xs-height">
+    <div class="row row-xs-height">
+      <div class="col-xs-6 nopadding col-xs-height">
+        <div id="video_view" class="embed-responsive embed-responsive-16by9"></div>
+        <div class="well well-lg">smarttvjs example app</div>
+      </div>
+
+      <div class="col-xs-6 nopadding col-xs-height" id="list_view">
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    footer
+  </nav>
+
+  <script type="text/html" id="header_template">
+    Hello <%= name %>. Network: <%= status %>
+  </script>
+
+  <script type="text/html" id="listitem_template">
+    <li class="list-group-item"><%= name %></li>
+  </script>
+
+  <script type="text/html" id="list_template">
+    <div class="oge-wrapper">
+      <div class="oge-scroller">
+        <ul class="list-group"></ul>
+      </div>
+    </div>
+  </script>
+
+  <!-- An id is required for video tag to used with youtube api. -->
+  <script type="text/html" id="video_template">
+    <video id='myvideo' class="video-js vjs-default-skin vjs-big-play-centered embed-responsive-item" poster="http://d1435t697bgi2o.cloudfront.net/wp-content/uploads/2013/10/orange-juice.jpg"></video>
+  </script>
+
+  <script type="text/javascript" src="lib/jquery.min.js"></script>
+  <script type="text/javascript" src="lib/underscore-min.js"></script>
+  <script type="text/javascript" src="lib/backbone-min.js"></script>
+  <script type="text/javascript" src="lib/smarttv.js"></script>
+  <!--
+    enable this to work with 'smarttvjs console'
+    <script type="text/javascript" src="http://localhost:8082/console.io.js"></script>
+  -->
+  <script type="text/javascript" src="app.js"></script>
+  <script>
+    //wrap initialization code into this special function only if you want to use youtube
+    $(document).ready(function() {
+      app.start();
+    });
+  </script>
+</body>
+</html>
