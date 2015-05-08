@@ -13,47 +13,77 @@
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
-        <div id="header_view" class="navbar-brand"></div>
+        <div id="header_view" class="navbar-brand">Header</div>
       </div>
     </div>
   </nav>
 
-  <div class="container-fluid container-xs-height">
-    <div class="row row-xs-height">
-      <div class="col-xs-6 nopadding col-xs-height">
-        <div id="video_view" class="embed-responsive embed-responsive-16by9"></div>
-        <div class="well well-lg">smarttvjs example app</div>
-      </div>
-
-      <div class="col-xs-6 nopadding col-xs-height" id="list_view">
+  <section id="main">
+    <div id="sidebar" class="oge-wrapper">
+      <div class="oge-scroller">
+        <ul class="list-group">
+          <li class="list-group-item"><b>General Info</b></li>
+          <li class="list-group-item">Command Lines</li>
+          <li class="list-group-item"><b>Core</b></li>
+          <li class="list-group-item"><a href="#Application">SmartTV.Application</a></li>
+          <li class="list-group-item"><a href="#Controller">SmartTV.Controller</a></li>
+          <li class="list-group-item"><a href="#Router">SmartTV.Router</a></li>
+          <li class="list-group-item"><b>Views</b></li>
+          <li class="list-group-item"><a href="#ItemView">SmartTV.ItemView</a></li>
+          <li class="list-group-item"><a href="#CompositeView">SmartTV.CompositeView</a></li>
+          <li class="list-group-item"><a href="#SpinnerView">SmartTV.SpinnerView</a></li>
+          <li class="list-group-item"><a href="#VideoView">SmartTV.VideoView</a></li>
+          <li class="list-group-item"><a href="#ScrollItemView">SmartTV.ScrollItemView</a></li>
+          <li class="list-group-item"><a href="#ScrollView">SmartTV.ScrollView</a></li>
+          <li class="list-group-item"><a href="#HorizontalScrollView">SmartTV.HorizontalScrollView</a></li>
+          <li class="list-group-item"><b>Models</b></li>
+          <li class="list-group-item"><a href="#Model">SmartTV.Model</a></li>
+          <li class="list-group-item"><a href="#XMLModel">SmartTV.XMLModel</a></li>
+          <li class="list-group-item"><a href="#Collection">SmartTV.Collection</a></li>
+          <li class="list-group-item"><a href="#XMLCollection">SmartTV.XMLCollection</a></li>
+          <li class="list-group-item"><a href="#OPMLCollection">SmartTV.OPMLCollection</a></li>
+          <li class="list-group-item"><a href="#OPMLCollection">SmartTV.OPMLCollection</a></li>
+          <li class="list-group-item"><a href="#RSSCollection">SmartTV.RSSCollection</a></li>
+          <li class="list-group-item"><a href="#CSVCollection">SmartTV.CSVCollection</a></li>
+        </ul>
       </div>
     </div>
-  </div>
+
+    <div id="content" class="oge-wrapper">
+      <div class="oge-scroller">
+        <a id="Application">SmartTV.Application</a><p></p>
+        <a id="Controller">SmartTV.Controller</a><p></p>
+        <a id="Router">SmartTV.Router</a><p></p>
+        <b>Views</b><p></p>
+        <a id="ItemView">SmartTV.ItemView</a><p></p>
+        <a id="CompositeView">SmartTV.CompositeView</a><p></p>
+        <a id="SpinnerView">SmartTV.SpinnerView</a><p></p>
+        <a id="VideoView">SmartTV.VideoView</a><p></p>
+        <a id="ScrollItemView">SmartTV.ScrollItemView</a><p></p>
+        <a id="ScrollView">SmartTV.ScrollView</a><p></p>
+        <a id="HorizontalScrollView">SmartTV.HorizontalScrollView</a><p></p>
+        <b>Models</b><p></p>
+        <a id="Model">SmartTV.Model</a><p></p>
+        <a id="XMLModel">SmartTV.XMLModel</a><p></p>
+        <a id="Collection">SmartTV.Collection</a><p></p>
+        <a id="XMLCollection">SmartTV.XMLCollection</a><p></p>
+        <a id="OPMLCollection">SmartTV.OPMLCollection</a><p></p>
+        <a id="OPMLCollection">SmartTV.OPMLCollection</a><p></p>
+        <a id="RSSCollection">SmartTV.RSSCollection</a><p></p>
+        <a id="CSVCollection">SmartTV.CSVCollection</a>
+  <p>
+  The title Grandmaster is awarded to chess players by the world chess organization FIDE. Apart from World Champion, Grandmaster is the highest title a chess player can attain. Once achieved, the title is held for life.
+  </p>
+
+
+      </div>
+    </div>
+
+  </section>
 
   <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     footer
   </nav>
-
-  <script type="text/html" id="header_template">
-    Hello <%= name %>. Network: <%= status %>
-  </script>
-
-  <script type="text/html" id="listitem_template">
-    <li class="list-group-item"><%= name %></li>
-  </script>
-
-  <script type="text/html" id="list_template">
-    <div class="oge-wrapper">
-      <div class="oge-scroller">
-        <ul class="list-group"></ul>
-      </div>
-    </div>
-  </script>
-
-  <!-- An id is required for video tag to used with youtube api. -->
-  <script type="text/html" id="video_template">
-    <video id='myvideo' class="video-js vjs-default-skin vjs-big-play-centered embed-responsive-item" poster="http://d1435t697bgi2o.cloudfront.net/wp-content/uploads/2013/10/orange-juice.jpg"></video>
-  </script>
 
   <script type="text/javascript" src="lib/jquery.min.js"></script>
   <script type="text/javascript" src="lib/underscore-min.js"></script>

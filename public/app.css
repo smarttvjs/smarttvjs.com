@@ -1,13 +1,13 @@
 /*your stylesheet here*/
 
+html,body {
+  height: 100%;
+}
+
 body { 
   background: #ccc;
   padding-top: 50px;
   padding-bottom: 38px;
-}
-
-.oge-wrapper {
-  height: 100%;
 }
 
 .navbar-fixed-top {
@@ -20,9 +20,18 @@ body {
 .navbar-fixed-bottom {
   text-align: center;
   height: 38px;
+  min-height: 38px;
   background: #444;
   color: #eee;
 }
+
+#sidebar, #content {
+  position: absolute;
+  top: 50px;
+  bottom: 38px;
+}
+#sidebar { left: 0; width: 20%; }
+#content { left: 20%; right: 0; width: 80% }
 
 .nopadding {
    padding: 0 !important;
