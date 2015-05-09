@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="lib/font-awesome.min.css" />
-  <link rel="stylesheet" type="text/css" href="lib/smarttv.css" />
+  <!--<link rel="stylesheet" type="text/css" href="lib/smarttv.css" />-->
   <link rel="stylesheet" type="text/css" href="app.css" />
 </head>
 <body>
+  <!--
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -17,73 +18,88 @@
       </div>
     </div>
   </nav>
+  -->
+  <div id="wrapper">
 
-  <section id="main">
-    <div id="sidebar" class="oge-wrapper">
-      <div class="oge-scroller">
-        <ul class="list-group">
-          <li class="list-group-item"><b>General Info</b></li>
-          <li class="list-group-item">Command Lines</li>
-          <li class="list-group-item"><b>Core</b></li>
-          <li class="list-group-item"><a href="#Application">SmartTV.Application</a></li>
-          <li class="list-group-item"><a href="#Controller">SmartTV.Controller</a></li>
-          <li class="list-group-item"><a href="#Router">SmartTV.Router</a></li>
-          <li class="list-group-item"><b>Views</b></li>
-          <li class="list-group-item"><a href="#ItemView">SmartTV.ItemView</a></li>
-          <li class="list-group-item"><a href="#CompositeView">SmartTV.CompositeView</a></li>
-          <li class="list-group-item"><a href="#SpinnerView">SmartTV.SpinnerView</a></li>
-          <li class="list-group-item"><a href="#VideoView">SmartTV.VideoView</a></li>
-          <li class="list-group-item"><a href="#ScrollItemView">SmartTV.ScrollItemView</a></li>
-          <li class="list-group-item"><a href="#ScrollView">SmartTV.ScrollView</a></li>
-          <li class="list-group-item"><a href="#HorizontalScrollView">SmartTV.HorizontalScrollView</a></li>
-          <li class="list-group-item"><b>Models</b></li>
-          <li class="list-group-item"><a href="#Model">SmartTV.Model</a></li>
-          <li class="list-group-item"><a href="#XMLModel">SmartTV.XMLModel</a></li>
-          <li class="list-group-item"><a href="#Collection">SmartTV.Collection</a></li>
-          <li class="list-group-item"><a href="#XMLCollection">SmartTV.XMLCollection</a></li>
-          <li class="list-group-item"><a href="#OPMLCollection">SmartTV.OPMLCollection</a></li>
-          <li class="list-group-item"><a href="#OPMLCollection">SmartTV.OPMLCollection</a></li>
-          <li class="list-group-item"><a href="#RSSCollection">SmartTV.RSSCollection</a></li>
-          <li class="list-group-item"><a href="#CSVCollection">SmartTV.CSVCollection</a></li>
-        </ul>
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li><b>General Info</b></li>
+        <li>Command Lines</li>
+        <li class="sidebar-brand"><b>Core</b></li>
+        <li><a href="#Application">Application</a></li>
+        <li><a href="#Controller">Controller</a></li>
+        <li><a href="#Router">Router</a></li>
+        <li><b>Views</b></li>
+        <li><a href="#ItemView">ItemView</a></li>
+        <li><a href="#CompositeView">CompositeView</a></li>
+        <li><a href="#SpinnerView">SpinnerView</a></li>
+        <li><a href="#VideoView">VideoView</a></li>
+        <li><a href="#ScrollItemView">ScrollItemView</a></li>
+        <li><a href="#ScrollView">ScrollView</a></li>
+        <li><b>Models</b></li>
+        <li><a href="#Model">Model</a></li>
+        <li><a href="#XMLModel">XMLModel</a></li>
+        <li><a href="#Collection">Collection</a></li>
+        <li><a href="#XMLCollection">XMLCollection</a></li>
+        <li><a href="#OPMLCollection">OPMLCollection</a></li>
+        <li><a href="#OPMLCollection">OPMLCollection</a></li>
+        <li><a href="#RSSCollection">RSSCollection</a></li>
+        <li><a href="#CSVCollection">CSVCollection</a></li>
+      </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <a id="Application">SmartTV.Application</a><p></p>
+            <a id="Controller">SmartTV.Controller</a><p></p>
+            <a id="Router">SmartTV.Router</a><p></p>
+            <b>Views</b><p></p>
+            <a id="ItemView">SmartTV.ItemView</a><p></p>
+            <a id="CompositeView">SmartTV.CompositeView</a><p></p>
+            <a id="SpinnerView">SmartTV.SpinnerView</a><p></p>
+            <a id="VideoView">SmartTV.VideoView</a><p></p>
+            <a id="ScrollItemView">SmartTV.ScrollItemView</a><p></p>
+            <a id="ScrollView">SmartTV.ScrollView</a><p></p>
+            <b>Models</b><p></p>
+            <a id="Model">SmartTV.Model</a><p></p>
+            <a id="XMLModel">SmartTV.XMLModel</a><p></p>
+            <a id="Collection">SmartTV.Collection</a><p></p>
+            <a id="XMLCollection">SmartTV.XMLCollection</a><p></p>
+            <a id="OPMLCollection">SmartTV.OPMLCollection</a><p></p>
+            <a id="OPMLCollection">SmartTV.OPMLCollection</a><p></p>
+            <a id="RSSCollection">SmartTV.RSSCollection</a><p></p>
+            <a id="CSVCollection">SmartTV.CSVCollection</a>
+            <p>
+              The title Grandmaster is awarded to chess players by the world chess organization FIDE. Apart from World Champion, Grandmaster is the highest title a chess player can attain. Once achieved, the title is held for life.
+            </p>
+            <p>
+              The title Grandmaster is awarded to chess players by the world chess organization FIDE. Apart from World Champion, Grandmaster is the highest title a chess player can attain. Once achieved, the title is held for life.
+            </p>
+            <p>
+              The title Grandmaster is awarded to chess players by the world chess organization FIDE. Apart from World Champion, Grandmaster is the highest title a chess player can attain. Once achieved, the title is held for life.
+            </p>
+            <p>
+              The title Grandmaster is awarded to chess players by the world chess organization FIDE. Apart from World Champion, Grandmaster is the highest title a chess player can attain. Once achieved, the title is held for life.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- /#page-content-wrapper -->
 
-    <div id="content" class="oge-wrapper">
-      <div class="oge-scroller">
-        <a id="Application">SmartTV.Application</a><p></p>
-        <a id="Controller">SmartTV.Controller</a><p></p>
-        <a id="Router">SmartTV.Router</a><p></p>
-        <b>Views</b><p></p>
-        <a id="ItemView">SmartTV.ItemView</a><p></p>
-        <a id="CompositeView">SmartTV.CompositeView</a><p></p>
-        <a id="SpinnerView">SmartTV.SpinnerView</a><p></p>
-        <a id="VideoView">SmartTV.VideoView</a><p></p>
-        <a id="ScrollItemView">SmartTV.ScrollItemView</a><p></p>
-        <a id="ScrollView">SmartTV.ScrollView</a><p></p>
-        <a id="HorizontalScrollView">SmartTV.HorizontalScrollView</a><p></p>
-        <b>Models</b><p></p>
-        <a id="Model">SmartTV.Model</a><p></p>
-        <a id="XMLModel">SmartTV.XMLModel</a><p></p>
-        <a id="Collection">SmartTV.Collection</a><p></p>
-        <a id="XMLCollection">SmartTV.XMLCollection</a><p></p>
-        <a id="OPMLCollection">SmartTV.OPMLCollection</a><p></p>
-        <a id="OPMLCollection">SmartTV.OPMLCollection</a><p></p>
-        <a id="RSSCollection">SmartTV.RSSCollection</a><p></p>
-        <a id="CSVCollection">SmartTV.CSVCollection</a>
-  <p>
-  The title Grandmaster is awarded to chess players by the world chess organization FIDE. Apart from World Champion, Grandmaster is the highest title a chess player can attain. Once achieved, the title is held for life.
-  </p>
+  </div>
+  <!-- /#wrapper -->
 
-
-      </div>
-    </div>
-
-  </section>
-
+  <!--
   <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     footer
   </nav>
+  -->
 
   <script type="text/javascript" src="lib/jquery.min.js"></script>
   <script type="text/javascript" src="lib/underscore-min.js"></script>
