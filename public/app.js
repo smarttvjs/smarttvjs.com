@@ -43,3 +43,10 @@ var app = new SmartTV.Application({
   },
   router: new MyRouter({controller: new MyController()}),
 });
+
+
+$("#menu-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("toggled");
+});
+    
