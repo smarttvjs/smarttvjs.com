@@ -18,6 +18,10 @@
           <span>SmartTV.JS</span>
         </div>
       </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://https://github.com/smarttvjs/smarttvjs"><i class="fa fa-2x fa-github"></i></a></li>
+        <li><a href="https://twitter.com/orangeetv"><i class="fa fa-2x fa-twitter"></i></a></li>
+      </ul>
     </div>
   </nav>
 
@@ -25,20 +29,17 @@
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
-        <li><b>General Info</b></li>
-        <li>Command Lines</li>
-        <li class="sidebar-brand"><b>Core</b></li>
+        <li class="sidebar-brand"><a href="#Introduction"><b>Introduction</b></a></li>
+        <li class="sidebar-brand"><a href="#Commands"><b>Commands</b></a></li>
         <li><a href="#Application">Application</a></li>
         <li><a href="#Controller">Controller</a></li>
         <li><a href="#Router">Router</a></li>
-        <li><b>Views</b></li>
         <li><a href="#ItemView">ItemView</a></li>
         <li><a href="#CompositeView">CompositeView</a></li>
         <li><a href="#SpinnerView">SpinnerView</a></li>
         <li><a href="#VideoView">VideoView</a></li>
         <li><a href="#ScrollItemView">ScrollItemView</a></li>
         <li><a href="#ScrollView">ScrollView</a></li>
-        <li><b>Models</b></li>
         <li><a href="#Model">Model</a></li>
         <li><a href="#XMLModel">XMLModel</a></li>
         <li><a href="#Collection">Collection</a></li>
@@ -56,17 +57,83 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12">
-            <a id="Application">SmartTV.Application</a><p></p>
-            <a id="Controller">SmartTV.Controller</a><p></p>
-            <a id="Router">SmartTV.Router</a><p></p>
-            <b>Views</b><p></p>
+            <a id="Introduction">Introduction</a>
+            <p>
+            SmartTV.JS is a javascript framework to build application for smart tvs. The current market of smart tv is very fragmented. While
+            most of them are html5 based, SDK/APIs from different vendors are incompatible and even the same vendor may have totally differnt
+            APIs for different models. The goal of this open source project is provider one common API that works for as many smart tv modesl 
+            as possible.
+            </p>
+            <p>
+            SmartTV.JS is built upon many other great frameworks, for example: JQuery, Backbone, Marionette, Bootstrap, Font Awesome etc. While 
+            we will try our best so that this document is self contained. Understanding those frameworks will be very helpful to build succeesful
+            smarg tv applications.
+            </p>
+            <a id="Commands">Commands</a>
+            <p>
+            </p>
+
+            <a id="Application">SmartTV.Application</a>
+            <p>
+            An instance SmartTV.Application is typically created at the end of the app.js file.
+            </p>
+              <pre>
+var app = new SmartTV.Application({
+  options: {
+    debug_enabled: true,
+    youtube_api: smarttv.PLATFORM != 'samsung',
+    dailymotion_api: true,
+  },
+  regions: {
+    header: "#header",
+    content: "#content",
+  },
+  router: new MyRouter({controller: new MyController()}),
+});
+
+$(document).ready(function() {
+  app.start();
+});
+              </pre>
+              Those <i>options</i> are supported:
+              <ul>
+              <li><b>debug_enabled</b>: set a true (default is false) to see more debugging output in the console</li>
+              <li><b>youtube_api</b>: set to true (default is false) load <a href="https://developers.google.com/youtube/iframe_api_reference">youtube api</a>, not this api does not work on samsung smart tv.</li>
+              <li><b>dailymotion_api</b>: set t true (default is false) to load <a href="https://developer.dailymotion.com/documentation#player-api">dailymotion api</a>.</li>
+            </ul>
+            <p>
+            <i>regions</i> are subsets of your html, and can be deinfed by jQuery selector. And they are helpful manage, show and destroy
+            views in your applications. e.g. <code>app.content.show(new SmartTV.SpinnerView());</code>. You can use <code>app.content.currentView</code> to figure out where view is being displayed right now. 
+            </p>
+            <p>
+            If you want to have bookmarkable url using hash fragments (#page), <i>router</i> paramster will be needed. It will be covered in depth in <a href="#Router"></a>. 
+            </p>
+            <a id="Controller">SmartTV.Controller</a>
+            <p>
+            <i>Controller</i> in smarttvjs is simply a bag of methods and can be defined by extending SmartTV.Controller. It will be used together with <i>Router</i>. 
+            </p>
+            <pre>
+var MyController = SmartTV.Controller.extend({
+  typeName: "MyController",
+  method1: function() {
+  },
+  method2: function() {
+  },
+});
+</pre>
+
+            <a id="Router">SmartTV.Router</a>
+            <p>
+            If you want to navigate to a router, use underlying backbone methods:<code>Backbone.history.navigate("hashtag1", {trigger: true});</code>
+            </p>
+            <a href="#"><b>Views</b></a><p></p>
             <a id="ItemView">SmartTV.ItemView</a><p></p>
             <a id="CompositeView">SmartTV.CompositeView</a><p></p>
             <a id="SpinnerView">SmartTV.SpinnerView</a><p></p>
             <a id="VideoView">SmartTV.VideoView</a><p></p>
             <a id="ScrollItemView">SmartTV.ScrollItemView</a><p></p>
             <a id="ScrollView">SmartTV.ScrollView</a><p></p>
-            <b>Models</b><p></p>
+            <a href="#"><b>Models</b></a><p></p>
             <a id="Model">SmartTV.Model</a><p></p>
             <a id="XMLModel">SmartTV.XMLModel</a><p></p>
             <a id="Collection">SmartTV.Collection</a><p></p>
