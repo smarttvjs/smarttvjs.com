@@ -60,37 +60,66 @@
           <div class="col-lg-12">
             <a id="Introduction">Introduction</a>
             <p>
-            SmartTV.JS is a javascript framework to build application for smart tvs. The current market of smart tv is very fragmented. While
-            most of them are html5 based, SDK/APIs from different vendors are incompatible and even the same vendor may have totally differnt
-            APIs for different models. The goal of this open source project is provider one common API that works for as many smart tv modesl 
+            SmartTV.JS is a javascript framework to build applications for smart tvs. The current market of smart tv is very fragmented. While
+            most of them are html5 based, SDK/APIs from different vendors are incompatible and even the same vendor may have totally multiple
+            APIs for different models. The goal of this open source project is to provide one common API that works for as many smart tv models 
             as possible.
             </p>
             <p>
-            SmartTV.JS is built upon many other great frameworks, for example: JQuery, Backbone, Marionette, Bootstrap, Font Awesome etc. While 
-            we will try our best so that this document is self contained. Understanding those frameworks will be very helpful to build succeesful
-            smarg tv applications.
+            SmartTV.JS is built upon many other great frameworks, for example: <a href="http://jquery.org">JQuery</a>, 
+              <a href="http://backbonejs.org">Backbone</a>, 
+              <a href="http://marionettejs.com">Marionette</a>, 
+              <a href="http://getbootstrap.com">Bootstrap</a>, 
+              <a href="http://www.videojs.com">Video.js</a>
+              <a href="http://fontawesome.io">Font Awesome</a> etc. While 
+            we will try our best to make this document self contained. Understanding those frameworks will be very helpful to build succeesful
+            smart tv applications.
             </p>
             <a id="Install">Install</a>
             <p>
             <ul>
               <li>install virtual pc 4.2 (lg does not support 4.3 and later so please do not use the latest) </li>
-              <li>install samsung smart tv sdk </li>
-              <li>install lg smart tv sdk </li>
+              <li>install <a href="https://www.samsungdforum.com/Devtools/SdkDownload">samsung smart tv sdk</a> (not the tizen one, which will be suppotred later) </li>
+              <li>install <a href="http://developer.lge.com/resource/tv/RetrieveNetCastSdktools.dev">lg netcast smart tv sdk</a> (not the webos one, which will be support later) </li>
               <li>For ios development, you need a mac computer with latest version of XCode. </li>
               <li>For android devlopment, make sure you have the latest Android SDK installed, 
               add "android" and "adb" command (inside the tools/ and platform-tools/ folder) to your PATH. Install Genymotion (a faster android emulator), and create a new device with it.</li>
-              <li>Install nodejs, then run the following commands (brew is for mac only, substitute it with the tools on your own platforms):</li>
+              <li>Install <a href="https://nodejs.org/download/">nodejs</a>, then run the following commands (brew is for mac only, substitute it with the tools on your own platforms):</li>
 <pre>
 npm install -g smarttvjs
-npm install -g cordova (if you want to use it for ios/android development)
-brew install graphicsmagick
-brew install ant (for android)
+npm install -g cordova (not required, only if you want to use to do ios/android development)
+brew install graphicsmagick ( http://www.imagemagick.org/script/binary-releases.php )
+brew install ant (not required. only for android development)
 </pre>
             </ul>
             </p>
             <a id="Commands">Commands</a>
             <p>
+              WARNING: currently command line interface is tested with Mac only, and some of them (may depdend on external program) may not work with other OS.
             </p>
+            <b>Create new project:</b>
+<pre>
+mkdir projectname
+cd projectname
+smarttvjs init 
+</pre>
+
+        <b>Build project:</b>
+<pre>
+smarttvjs build samsung
+smarttvjs build lg
+</pre>
+
+          <b>Run in emulator:</b>
+<pre>
+smarttvjs run samsung
+smarttvjs run lg
+</pre>
+            <b>Install on real samsung tv as developer:</b>
+<pre>
+sudo smarttvjs server 80 build/  
+</pre>
+<p>You do not need to use vendor IDE for development, but if you want to, you can import project from build/samsung in samsung sdk and import project from buidl/lg in lg sdk
 
             <a id="Application">SmartTV.Application</a>
             <p>
