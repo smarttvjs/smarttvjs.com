@@ -26,6 +26,14 @@ body {
   color: #eee;
 }
 
+.navbar-header {
+  width:100%;
+}
+
+.navbar-brand.pull-right {
+  padding: 9px 15px;
+}
+
 /* http://ironsummitmedia.github.io/startbootstrap-simple-sidebar/css/simple-sidebar.css *
 /* Toggle Styles */
 

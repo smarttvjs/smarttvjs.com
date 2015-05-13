@@ -17,11 +17,11 @@
           <a href="#menu-toggle" class="visible-xs-inline" id="menu-toggle"><i class="fa fa-bars"></i></a>
           <span>SmartTV.JS</span>
         </div>
+        <div class="navbar-brand pull-right">
+          <a href="http://https://github.com/smarttvjs/smarttvjs"><i class="fa fa-2x fa-github"></i></a>
+          <a href="https://twitter.com/orangeetv" class="pull-right"><i class="fa fa-2x fa-twitter"></i></a>
+        </div>
       </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="http://https://github.com/smarttvjs/smarttvjs"><i class="fa fa-2x fa-github"></i></a></li>
-        <li><a href="https://twitter.com/orangeetv"><i class="fa fa-2x fa-twitter"></i></a></li>
-      </ul>
     </div>
   </nav>
 
@@ -30,6 +30,7 @@
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <li class="sidebar-brand"><a href="#Introduction"><b>Introduction</b></a></li>
+        <li class="sidebar-brand"><a href="#Install"><b>Install</b></a></li>
         <li class="sidebar-brand"><a href="#Commands"><b>Commands</b></a></li>
         <li><a href="#Application">Application</a></li>
         <li><a href="#Controller">Controller</a></li>
@@ -68,6 +69,24 @@
             SmartTV.JS is built upon many other great frameworks, for example: JQuery, Backbone, Marionette, Bootstrap, Font Awesome etc. While 
             we will try our best so that this document is self contained. Understanding those frameworks will be very helpful to build succeesful
             smarg tv applications.
+            </p>
+            <a id="Install">Install</a>
+            <p>
+            <ul>
+              <li>install virtual pc 4.2 (lg does not support 4.3 and later so please do not use the latest) </li>
+              <li>install samsung smart tv sdk </li>
+              <li>install lg smart tv sdk </li>
+              <li>For ios development, you need a mac computer with latest version of XCode. </li>
+              <li>For android devlopment, make sure you have the latest Android SDK installed, 
+              add "android" and "adb" command (inside the tools/ and platform-tools/ folder) to your PATH. Install Genymotion (a faster android emulator), and create a new device with it.</li>
+              <li>Install nodejs, then run the following commands (brew is for mac only, substitute it with the tools on your own platforms):</li>
+<pre>
+npm install -g smarttvjs
+npm install -g cordova (if you want to use it for ios/android development)
+brew install graphicsmagick
+brew install ant (for android)
+</pre>
+            </ul>
             </p>
             <a id="Commands">Commands</a>
             <p>

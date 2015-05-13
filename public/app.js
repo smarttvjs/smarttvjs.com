@@ -24,6 +24,7 @@ var ContentView = SmartTV.ItemView.extend({
 });
 */
 
+/*
 var MyRouter = SmartTV.Router.extend({
   appRoutes: {
     "": "index",
@@ -35,13 +36,13 @@ var MyController = SmartTV.Controller.extend({
     (new SidebarView()).triggerMethod('show'); //already rendered
     (new ContentView()).triggerMethod('show'); //already rendered
   },
-});
+});*/
 
 var app = new SmartTV.Application({
   options: {
     debug_enabled: true,
   },
-  router: new MyRouter({controller: new MyController()}),
+  //router: new MyRouter({controller: new MyController()}),
 });
 
 
