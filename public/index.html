@@ -165,17 +165,59 @@ var MyController = SmartTV.Controller.extend({
   typeName: "MyController",
   method1: function() {
   },
-  method2: function() {
+  method2: function(id) {
   },
 });
 </pre>
+            <p>It worths noting that <i>typeName</i> is a convention we use to deal with javascript's lack of type introspection. It is optional, but might come in handy 
+            when you are debugging.</p>
 
             <a id="Router">SmartTV.Router</a>
             <p>
-            If you want to navigate to a router, use underlying backbone methods:<code>Backbone.history.navigate("hashtag1", {trigger: true});</code>
+              <i>Router</i>
             </p>
-            <a href="#"><b>Views</b></a><p></p>
-            <a id="ItemView">SmartTV.ItemView</a><p></p>
+<pre>
+var MyRouter = SmartTV.Router.extend({
+  typeName: "MyRouter",
+  appRoutes: {
+    "": "method1",
+    "videos/:id": "method2",
+  },
+});
+</pre>
+            <p>
+            If you want to navigate to a router, use underlying backbone methods:<code>Backbone.history.navigate("videos/1", {trigger: true});</code>
+            </p>
+            <a id="ItemView">SmartTV.ItemView</a><p>
+              ItemView is one of the two basic base view class in SmartTV.JS (the other is  <a href="CompositeView"><i>CompositeView<i></a>). And very often, you will
+                use the subsclass (e.g. <a href="ScrollerView"><i>ScrollerView<i></a> ) instead of using it direcctly.
+              </p>
+<pre>var MyItemView = SmartTV.ItemView.extend({
+  typeName: "MyItemView",
+  template: "#myItemTmpl",
+  onRender: function() {
+  },
+  onShow: function() {
+  },
+  onDestroy: function() {
+  },
+  keyEvents: {
+    'up': 'onKeyUp',
+    'down': 'onKeyDown',
+  },
+  onKeyUp: function() {
+    this.scrollBy(0, 100);
+  },
+  onKeyDown: function() {
+    this.scrollBy(0, -100);
+  },
+</pre>
+  	       <p>
+             <i>template</i> is the only required parameter. It can be a jquery selector ("#id", ".class" etc), or a string, or false (which means no template). 
+             Template uses underscore format which is documented at <a href="http://underscorejs.org/#template">underscore's website</a>. Here is an example: 
+            </p>
+            <iframe width="100%" height="300" src="http://jsfiddle.net/smarttvjs/u822vtv4/3/embedded/html,js,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
             <a id="CompositeView">SmartTV.CompositeView</a><p></p>
             <a id="SpinnerView">SmartTV.SpinnerView</a><p></p>
             <a id="VideoView">SmartTV.VideoView</a><p></p>
@@ -190,18 +232,7 @@ var MyController = SmartTV.Controller.extend({
             <a id="OPMLCollection">SmartTV.OPMLCollection</a><p></p>
             <a id="RSSCollection">SmartTV.RSSCollection</a><p></p>
             <a id="CSVCollection">SmartTV.CSVCollection</a>
-            <p>
-              The title Grandmaster is awarded to chess players by the world chess organization FIDE. Apart from World Champion, Grandmaster is the highest title a chess player can attain. Once achieved, the title is held for life.
-            </p>
-            <p>
-              The title Grandmaster is awarded to chess players by the world chess organization FIDE. Apart from World Champion, Grandmaster is the highest title a chess player can attain. Once achieved, the title is held for life.
-            </p>
-            <p>
-              The title Grandmaster is awarded to chess players by the world chess organization FIDE. Apart from World Champion, Grandmaster is the highest title a chess player can attain. Once achieved, the title is held for life.
-            </p>
-            <p>
-              The title Grandmaster is awarded to chess players by the world chess organization FIDE. Apart from World Champion, Grandmaster is the highest title a chess player can attain. Once achieved, the title is held for life.
-            </p>
+          
           </div>
         </div>
       </div>
