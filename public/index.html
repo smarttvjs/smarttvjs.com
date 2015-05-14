@@ -217,6 +217,10 @@ var MyRouter = SmartTV.Router.extend({
   onKeyDown: function() {
     smarttv.log("down pressed");
   },
+  events: {},
+  modelEvents: {},
+  collectionEvents: {
+  },
 </pre>
   	       <p>
              <i>template</i> is the only required parameter. It can be a jquery selector ("#id", ".class" etc), or a string, or false (which means no template). 
@@ -244,9 +248,8 @@ var MyRouter = SmartTV.Router.extend({
             <a id="OPMLCollection">SmartTV.OPMLCollection</a><p></p>
             <a id="RSSCollection">SmartTV.RSSCollection</a><p></p>
             <a id="CSVCollection">SmartTV.CSVCollection</a>
-              <p></p>
-<pre>
-</pre>          
+              <iframe width="100%" height="300" src="//jsfiddle.net/smarttvjs/934kw76k/embedded/html,js,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+              <p></p>          
           </div>
         </div>
       </div>
