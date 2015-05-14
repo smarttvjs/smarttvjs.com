@@ -1,53 +1,26 @@
 //your script here
 'use strict';
 
-var SidebarView = SmartTV.ScrollView.extend({
-  el: "#sidebar",
-});
-
-var ContentView = SmartTV.ScrollView.extend({
-  el: "#content",
-});
-
-/*
-var NavView = SmartTV.ItemView.extend({
+var Menu = SmartTV.ItemView.extend({
+  el: "#menu-toggle",
+  template: false,
   events: {
-    'click ': 'clickLink',
+    'click': 'onClick',
   },
-
-  clickLink: {
-    
-  },
-});
-
-var ContentView = SmartTV.ItemView.extend({
-});
-*/
-
-/*
-var MyRouter = SmartTV.Router.extend({
-  appRoutes: {
-    "": "index",
+  onClick: function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
   },
 });
-
-var MyController = SmartTV.Controller.extend({
-  index: function() {
-    (new SidebarView()).triggerMethod('show'); //already rendered
-    (new ContentView()).triggerMethod('show'); //already rendered
-  },
-});*/
 
 var app = new SmartTV.Application({
   options: {
     debug_enabled: true,
   },
-  //router: new MyRouter({controller: new MyController()}),
+  onStart: function() {
+    smarttv.debug("onStart");
+    new Menu();
+  },
 });
 
 
-$("#menu-toggle").click(function(e) {
-  e.preventDefault();
-  $("#wrapper").toggleClass("toggled");
-});
-    
