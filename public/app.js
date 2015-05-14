@@ -18,7 +18,6 @@ var app = new SmartTV.Application({
     debug_enabled: true,
   },
   onStart: function() {
-    smarttv.debug("onStart");
     new Menu();
   },
 });

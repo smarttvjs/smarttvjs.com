@@ -137,6 +137,12 @@ var app = new SmartTV.Application({
     content: "#content",
   },
   router: new MyRouter({controller: new MyController()}),
+  onBeforeStart: function() {
+    //fired just before the Application starts and before the initializers are executed.
+  },
+  onStart: function() {
+    //fired when the Application has started and after the initializers have been executed.
+  },
 });
 
 $(document).ready(function() {
@@ -230,7 +236,6 @@ var MyRouter = SmartTV.Router.extend({
             <a id="VideoView">SmartTV.VideoView</a><p></p>
             <a id="ScrollItemView">SmartTV.ScrollItemView</a><p></p>
             <a id="ScrollView">SmartTV.ScrollView</a><p></p>
-            <a href="#"><b>Models</b></a><p></p>
             <a id="Model">SmartTV.Model</a><p></p>
             <a id="XMLModel">SmartTV.XMLModel</a><p></p>
             <a id="Collection">SmartTV.Collection</a><p></p>
@@ -239,7 +244,9 @@ var MyRouter = SmartTV.Router.extend({
             <a id="OPMLCollection">SmartTV.OPMLCollection</a><p></p>
             <a id="RSSCollection">SmartTV.RSSCollection</a><p></p>
             <a id="CSVCollection">SmartTV.CSVCollection</a>
-          
+              <p></p>
+<pre>
+</pre>          
           </div>
         </div>
       </div>
