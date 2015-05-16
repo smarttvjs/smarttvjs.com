@@ -235,19 +235,43 @@ var MyRouter = SmartTV.Router.extend({
             <p>The following keys are supported: <b>up</b>,<b>down</b>, <b>left</b>, <b>right</b>, <b>enter</b>, <b>back</b>, <b>play</b>
             , <b>play</b>, <b>pause</b>, <b>fastforward</b>, <b>rewind</b></p>
 
-            <a id="CompositeView">SmartTV.CompositeView</a><p></p>
-            <a id="SpinnerView">SmartTV.SpinnerView</a><p></p>
-            <a id="VideoView">SmartTV.VideoView</a><p></p>
-            <a id="ScrollItemView">SmartTV.ScrollItemView</a><p></p>
-            <a id="ScrollView">SmartTV.ScrollView</a><p></p>
-            <a id="Model">SmartTV.Model</a><p></p>
-            <a id="XMLModel">SmartTV.XMLModel</a><p></p>
-            <a id="Collection">SmartTV.Collection</a><p></p>
-            <a id="XMLCollection">SmartTV.XMLCollection</a><p></p>
+            <a id="CompositeView">SmartTV.CompositeView</a><p>
+              <a href="http://marionettejs.com/docs/marionette.compositeview.html"> see marionette.compositeview </a>
+              </p>
+            <a id="SpinnerView">SmartTV.SpinnerView</a><p>An animated CSS3 loading spinner</p>
+              <pre>
+var app = new SmartTV.Application({
+    regions: {
+        myregion: '#view'
+    },
+});
+
+app.myregion.show(new SmartTV.SpinnerView());               
+              </pre>
+            <a id="VideoView">SmartTV.VideoView</a><p>A full video view</p>
+            <a id="ScrollItemView">SmartTV.ScrollItemView</a><p>An item inside ScrollView.</p>
+            <a id="ScrollView">SmartTV.ScrollView</a><p>A scrollable UI component which is typically used to implement video selection screen.</p>
+            <a id="Model">SmartTV.Model</a>
+            <p>This is a thin wrapper of <a href="http://backbonejs.org/#Model">Backbone's model</a>, and we make it slightly better by exposing the cid attribute (useful
+              for building bookmarkable url). SmartTV.Model is also selectable: <code>mymodel.select()</code></p>.
+            <p>If you are new to Backbone, remember the data layer (Model and Collection) your single source of truth. User's interaction normally trigger changes in the data 
+              layer, which in turn triggers update in View.</p>
+            <a id="XMLModel">SmartTV.XMLModel</a><p>
+              This is a Model with XML parser (using xml2json). 
+             </p>
+            <a id="Collection">SmartTV.Collection</a><p>
+              A collection of Models. Again, select is provided: <code>collection.select(model)</code>.
+              </p>
+              
+            <a id="XMLCollection">SmartTV.XMLCollection</a><p>
+              Base class of <i>OPMLCollection</i>  and <i>RSSCollection</i>.
+              </p>
             <a id="OPMLCollection">SmartTV.OPMLCollection</a>
+            <p>OPML is very XML file. The advantage over the better known RSS format is that it can be nested, which is vry helpful to build an nested directory structure.</p>
             <iframe width="100%" height="300" src="http://jsfiddle.net/smarttvjs/tty0rd0h/1/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-            <p></p>
+            
             <a id="RSSCollection">SmartTV.RSSCollection</a>
+              <p>This reprect a MRSS file. Here is an <a href="http://feeds2.feedburner.com/tedtalks_video/">example file</a>. </p>
             <iframe width="100%" height="300" src="http://jsfiddle.net/smarttvjs/otj83jmq/1/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
             <p></p>
             
