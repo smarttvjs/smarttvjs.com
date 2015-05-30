@@ -58,10 +58,13 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-12">
+            <div class="alert alert-success" role="alert">
+              We are looking for sponsors! Especially donation of hardwares 
+              so that we can test on more smart tv models. Please contact support@orangee.tv</div>
             <a id="Introduction">Introduction</a>
             <p>
             SmartTV.JS is a javascript framework to build applications for smart tvs. The current market of smart tv is very fragmented. While
-            most of them are html5 based, SDK/APIs from different vendors are incompatible and even the same vendor may have totally multiple
+            most of them are html5 based, SDK/APIs from different vendors are incompatible and even the same vendor may have multiple
             APIs for different models. The goal of this open source project is to provide one common API that works for as many smart tv models 
             as possible.
             </p>
@@ -72,7 +75,7 @@
               <a href="http://getbootstrap.com">Bootstrap</a>, 
               <a href="http://www.videojs.com">Video.js</a>
               <a href="http://fontawesome.io">Font Awesome</a> etc. While 
-            we will try our best to make this document self contained. Understanding those frameworks will be very helpful to build succeesful
+            we will try our best to make this document self-contained. Understanding those frameworks will be very helpful to build successful
             smart tv applications.
             </p>
             <a id="Install">Install</a>
@@ -80,7 +83,7 @@
             <ul>
               <li>install virtual pc 4.2 (lg does not support 4.3 and later so please do not use the latest) </li>
               <li>install <a href="https://www.samsungdforum.com/Devtools/SdkDownload">samsung smart tv sdk</a> (not the tizen one, which will be suppotred later) </li>
-              <li>install <a href="http://developer.lge.com/resource/tv/RetrieveNetCastSdktools.dev">lg netcast smart tv sdk</a> (not the webos one, which will be support later) </li>
+              <li>install <a href="http://developer.lge.com/resource/tv/RetrieveNetCastSdktools.dev">lg netcast smart tv sdk</a> (not the webos one, which will be supported later) </li>
               <li>For ios development, you need a mac computer with latest version of XCode. </li>
               <li>For android devlopment, make sure you have the latest Android SDK installed, 
               add "android" and "adb" command (inside the tools/ and platform-tools/ folder) to your PATH. Install Genymotion (a faster android emulator), and create a new device with it.</li>
@@ -119,7 +122,7 @@ smarttvjs run lg
 <pre>
 sudo smarttvjs server 80 build/  
 </pre>
-<p>You do not need to use vendor IDE for development, but if you want to, you can import project from build/samsung in samsung sdk and import project from buidl/lg in lg sdk
+<p>You do not need to use vendor's IDE for development, but if you want to, you can import project from build/samsung in samsung sdk and import project from buidl/lg in lg sdk
 
             <a id="Application">SmartTV.Application</a>
             <p>
@@ -180,7 +183,7 @@ var MyController = SmartTV.Controller.extend({
 
             <a id="Router">SmartTV.Router</a>
             <p>
-              <i>Router</i>
+              You can use <i>Router</i> to create a bookmarkable urls (hashbang) within your app.
             </p>
 <pre>
 var MyRouter = SmartTV.Router.extend({
@@ -254,30 +257,30 @@ app.myregion.show(new SmartTV.SpinnerView());
             <a id="Model">SmartTV.Model</a>
             <p>This is a thin wrapper of <a href="http://backbonejs.org/#Model">Backbone's model</a>, and we make it slightly better by exposing the cid attribute (useful
               for building bookmarkable url). SmartTV.Model is also selectable: <code>mymodel.select()</code></p>.
-            <p>If you are new to Backbone, remember the data layer (Model and Collection) your single source of truth. User's interaction normally trigger changes in the data 
+            <p>If you are new to Backbone, remember the data layer (Model and Collection) should be your single source of truth. User's interaction normally trigger changes in the data 
               layer, which in turn triggers update in View.</p>
             <a id="XMLModel">SmartTV.XMLModel</a><p>
               This is a Model with XML parser (using xml2json). 
              </p>
             <a id="Collection">SmartTV.Collection</a><p>
-              A collection of Models. Again, select is provided: <code>collection.select(model)</code>.
+            A collection of Models. Again, <i>select</i> is provided: <code>collection.select(model)</code>.
               </p>
               
             <a id="XMLCollection">SmartTV.XMLCollection</a><p>
               Base class of <i>OPMLCollection</i>  and <i>RSSCollection</i>.
               </p>
             <a id="OPMLCollection">SmartTV.OPMLCollection</a>
-            <p>OPML is very XML file. The advantage over the better known RSS format is that it can be nested, which is vry helpful to build an nested directory structure.</p>
+            <p>OPML is very XML file. The advantage over the better known RSS format is that it can be nested, which is very helpful to build an nested directory structure.</p>
             <iframe width="100%" height="300" src="http://jsfiddle.net/smarttvjs/tty0rd0h/1/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
             
             <a id="RSSCollection">SmartTV.RSSCollection</a>
-              <p>This reprect a MRSS file. Here is an <a href="http://feeds2.feedburner.com/tedtalks_video/">example file</a>. </p>
+              <p>This represent a MRSS file. Here is an <a href="http://feeds2.feedburner.com/tedtalks_video/">example file</a>. </p>
             <iframe width="100%" height="300" src="http://jsfiddle.net/smarttvjs/otj83jmq/1/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
             <p></p>
             
             <a id="CSVCollection">SmartTV.CSVCollection</a>
               <iframe width="100%" height="300" src="http://jsfiddle.net/smarttvjs/934kw76k/embedded/1/js,html,result" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-              <p></p>          
+              <p>Similar to RSSCollection, but use CSV format (comma or space seperated) instead.</p>
           </div>
         </div>
       </div>

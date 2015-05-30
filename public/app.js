@@ -1,7 +1,7 @@
 //your script here
 'use strict';
 
-var Menu = SmartTV.ItemView.extend({
+var MenuButton = SmartTV.ItemView.extend({
   el: "#menu-toggle",
   template: false,
   events: {
@@ -13,11 +13,23 @@ var Menu = SmartTV.ItemView.extend({
   },
 });
 
+var Menu = SmartTV.ItemView.extend({
+  el: "#sidebar-wrapper",
+  template: false,
+  hammerEvents: {
+    'swipeleft': 'onSwipeleft',
+  },
+  onSwipeleft: function(e) {
+    $("#wrapper").removeClass("toggled");
+  },
+});
+
 var app = new SmartTV.Application({
   options: {
     debug_enabled: true,
   },
   onStart: function() {
+    new MenuButton();
     new Menu();
   },
 });
